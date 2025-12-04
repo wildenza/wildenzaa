@@ -122,12 +122,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- PORTFOLIO / PAGINATION INITIALISATION ---
-    allProjects = Array.from(document.querySelectorAll('.project-item'));
-
-    // Set initial filter to 'all' and apply pagination
-    applyFilterAndPagination();
+    // --- LOAD PROJECTS FROM EXTERNAL FILE ---
+    loadProjects();
 });
+
+// --- Function to load projects from external file ---
+async function loadProjects() {
+    try {
+        const response = await fetch('projects-partial.html');
+        if (!response.ok) {
+            throw new Error('Failed to load projects');
+        }
+        const html = await response.text();
+        const projectsGrid = document.getElementById('projects-grid');
+        if (projectsGrid) {
+            projectsGrid.innerHTML = html;
+            
+            // Re-initialize icons after content is loaded
+            if (window.lucide && typeof window.lucide.createIcons === 'function') {
+                window.lucide.createIcons();
+            }
+            
+            // Initialize projects after they're loaded
+            allProjects = Array.from(document.querySelectorAll('.project-item'));
+            
+            // Set initial filter to 'all' and apply pagination
+            applyFilterAndPagination();
+        }
+    } catch (error) {
+        console.error('Error loading projects:', error);
+        const projectsGrid = document.getElementById('projects-grid');
+        if (projectsGrid) {
+            projectsGrid.innerHTML = '<p class="text-center text-red-500">Error loading projects. Please refresh the page.</p>';
+        }
+    }
+}
 
 // --- Helper: does a project match the current filter? ---
 function projectMatchesFilter(project, category) {
