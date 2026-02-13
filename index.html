@@ -13,8 +13,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Spline Viewer Script --><script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.59/build/spline-viewer.js"></script>
-    
     <!-- Lucide Icons --><script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="font-mono text-neo-black selection:bg-neo-pink selection:text-white">
@@ -24,11 +22,11 @@
             DEV_ART_3D
         </div>
         <div class="hidden md:flex gap-4">
-            <a href="#about" class="hover:underline decoration-4 decoration-neo-blue underline-offset-4 font-bold">DESPRE MINE</a>
-            <a href="#history" class="hover:underline decoration-4 decoration-neo-pink underline-offset-4 font-bold">ISTORIC</a>
+            <a href="#about" class="hover:underline decoration-4 decoration-neo-blue underline-offset-4 font-bold">ABOUT ME</a>
+            <a href="#history" class="hover:underline decoration-4 decoration-neo-pink underline-offset-4 font-bold">HISTORY</a>
             <a href="#skills" class="hover:underline decoration-4 decoration-neo-yellow underline-offset-4 font-bold">SKILLS</a>
-            <a href="#work" class="hover:underline decoration-4 decoration-neo-pink underline-offset-4 font-bold">PORTOFOLIU</a>
-            <a href="#shop" class="hover:underline decoration-4 decoration-neo-green underline-offset-4 font-bold">MAGAZIN</a>
+            <a href="#work" class="hover:underline decoration-4 decoration-neo-pink underline-offset-4 font-bold">PORTOFOLIO</a>
+            <a href="#shop" class="hover:underline decoration-4 decoration-neo-green underline-offset-4 font-bold">SHOP</a>
             <a href="#contact" class="hover:underline decoration-4 decoration-neo-blue underline-offset-4 font-bold">CONTACT</a>
         </div>
         <button class="md:hidden border-2 border-black p-2 bg-neo-yellow shadow-neo active:shadow-neo-hover active:translate-x-1 active:translate-y-1" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
@@ -57,13 +55,13 @@
                 ELEGY CONTESTED
             </div>
             <h1 class="reveal-up delay-100 text-5xl md:text-7xl font-display font-black leading-none bg-white border-4 border-black p-6 shadow-neo-deep">
-                CREATOR<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-neo-lightblue to-neo-orange" style="-webkit-text-stroke: 2px black;">DIGITAL</span><br>
+                DIGITAL <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-neo-lightblue to-neo-orange" style="-webkit-text-stroke: 2px black;">CREATOR</span><br>
                 & CODER.
             </h1>
             <p class="reveal-up delay-200 text-xl bg-white border-4 border-black p-4 shadow-neo max-w-md">
                 
-                Specialized in 3D modeling, game-dev assets, and creative programming. Cool & fun results.
+                Specialized in 3D modeling/3D printing, game-dev assets, and creative programming. Cool & fun results.
             </p>
             <div class="reveal-up delay-300 flex gap-4 flex-wrap">
                 <a href="#work" class="bg-neo-black text-white border-4 border-black px-8 py-4 font-bold text-lg shadow-neo hover:bg-neo-pink hover:text-black transition-colors active:translate-x-1 active:translate-y-1 active:shadow-neo-hover">
@@ -80,8 +78,8 @@
                 <div class="text-3xl font-bold mb-4 animate-pulse">LOADING_3D_ASSET...</div>
                 <div class="w-24 h-2 bg-neo-pink border-2 border-neo-yellow"></div>
             </div>
-            <div class="absolute top-2 left-2 bg-neo-yellow border-2 border-black px-2 z-10 font-bold text-xs">INTERACTIVE 3D</div>
-            <!-- Added id to viewer for JS access --><spline-viewer id="main-spline-viewer" url="https://my.spline.design/miniroomartcopy-vSsVbyiLTpgPoUk3Qkcf1p94/"></spline-viewer>
+            <div class="absolute top-2 left-2 bg-neo-yellow border-2 border-black px-2 z-10 font-bold text-xs">WIE INTERACTIVE</div>
+            <iframe id="main-spline-iframe" src="https://my.spline.design/miniroomartcopy-vSsVbyiLTpgPoUk3Qkcf1p94/" frameborder="0" width="100%" height="100%"></iframe>
         </div>
     </header>
 
@@ -102,12 +100,12 @@
             </div>
             
             <p class="reveal-up delay-100 text-xl leading-relaxed mb-6 font-bold">
-                I define myself as a Digital Creator. I chase smooth and funâ€”I work with efficient solutions and a brutalist aesthetic, where raw materials like
+                I define myself as a Digital Creator. I chase smooth and functional work with efficient solutions and a brutalist aesthetic, where raw materials like
 <span style="color: orange;">low-poly geometry</span>,
 <span style="color: #ff0000;">PSX-style textures</span>,
 and even <span style="color: #00ff00;">bare lines of code</span> are treated as part of the aesthetic.
 
-My workflow spans the entire asset-development pipeline: from concepting in Blender, to low-poly modeling and retro texturing, to implementation and optimization. Beyond game assets, I also work in <span style="color: #8000ff;">3D printing</span>â€”custom models, functional prints, and hand-painted piecesâ€”plus the occasional just-for-fun website.
+My workflow spans the entire asset-development pipeline: from concepting in Blender, to low-poly modeling and retro texturing, to implementation and optimization. Beyond game assets, I also work with <span style="color: #8000ff;">3D printing </span>custom models, functional prints, and hand-painted pieces plus the occasional just-for-fun websites.
             </p>
             <p class="reveal-up delay-200 text-lg">
                  
@@ -145,8 +143,8 @@ My workflow spans the entire asset-development pipeline: from concepting in Blen
                 </div>
             </div>
 
-            <!-- Timeline Item 2 --><div class="reveal-right mb-16 flex justify-end md:justify-start md:pl-12 relative z-10">
-                <!-- Marker --><div class="absolute left-4 top-0 w-10 h-10 bg-neo-yellow border-4 border-black rounded-full flex items-center justify-center -translate-x-1/2 md:left-1/2 md:-translate-x-1/2 z-10">
+            <div class="reveal-right mb-16 flex justify-end md:justify-start md:pl-12 relative z-10">
+                <div class="absolute left-4 top-0 w-10 h-10 bg-neo-yellow border-4 border-black rounded-full flex items-center justify-center -translate-x-1/2 md:left-1/2 md:-translate-x-1/2 z-10">
                     <i data-lucide="wrench" class="w-5 h-5 text-neo-black"></i>
                 </div>
                 <div class="w-full md:w-1/2 md:ml-10">
@@ -159,8 +157,8 @@ My workflow spans the entire asset-development pipeline: from concepting in Blen
                 </div>
             </div>
 
-            <!-- Timeline Item 3 --><div class="reveal-left mb-16 flex justify-start md:justify-end md:pr-12 relative z-10">
-                <!-- Marker --><div class="absolute left-4 top-0 w-10 h-10 bg-neo-blue border-4 border-black rounded-full flex items-center justify-center -translate-x-1/2 md:left-1/2 md:-translate-x-1/2 z-10">
+           <div class="reveal-left mb-16 flex justify-start md:justify-end md:pr-12 relative z-10">
+                <div class="absolute left-4 top-0 w-10 h-10 bg-neo-blue border-4 border-black rounded-full flex items-center justify-center -translate-x-1/2 md:left-1/2 md:-translate-x-1/2 z-10">
                     <i data-lucide="graduation-cap" class="w-5 h-5 text-neo-black"></i>
                 </div>
                 <!-- DIV EXPERIENTA -->
@@ -290,7 +288,7 @@ My workflow spans the entire asset-development pipeline: from concepting in Blen
                         </div>
                     </div>
 
-                    <!-- Shop Category: Physical/Prints -->
+                    
                     <div class="reveal-right border-4 border-black p-6 bg-neo-bg hover:bg-white transition-colors">
                         <div class="flex items-center gap-4 mb-4">
                             <i data-lucide="printer" class="w-10 h-10"></i>
@@ -298,7 +296,7 @@ My workflow spans the entire asset-development pipeline: from concepting in Blen
                         </div>
                         <p class="mb-6 font-bold">Phisical Objects, Prints and More.</p>
                         <div class="flex flex-col gap-3">
-                            <!-- Link Etsy are acum fundal Albastru Deschis -->
+                            
                             <a href="https://wildenza3dprints.etsy.com" target="_blank" class="flex justify-between items-center bg-neo-lightblue text-black border-2 border-black p-3 font-bold hover:pl-5 transition-all shadow-neo-hover">
                                 <span>ETSY SHOP</span>
                                 <i data-lucide="shopping-bag"></i>
@@ -346,7 +344,7 @@ My workflow spans the entire asset-development pipeline: from concepting in Blen
             </div>
 
             <div class="border-t-2 border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-                <p>&copy; 2025 WIELEN PORTOFOLIU. All rights reserved.</p>
+                <p>&copy; 2026 WIELEN PORTOFOLIO. All rights reserved.</p>
                 <p>BUILT WITH CODE & PROCRASTINATION</p>
             </div>
         </div>
@@ -354,7 +352,7 @@ My workflow spans the entire asset-development pipeline: from concepting in Blen
 
     <!-- PROJECT MODAL (Hidden by default) --><div id="project-modal" class="fixed inset-0 z-[60] hidden bg-black/80 flex justify-center items-center p-4 opacity-0 transition-opacity duration-300">
         <div class="bg-white border-4 border-black shadow-neo-deep w-full max-w-3xl max-h-[90vh] overflow-y-auto relative transform scale-95 transition-transform duration-300" id="modal-content">
-            <!-- Close Button -->
+            
             <button onclick="closeModal()" class="absolute top-4 right-4 bg-neo-pink border-2 border-black p-2 font-bold hover:bg-black hover:text-white transition-colors z-10">
                 <i data-lucide="x"></i>
             </button>
@@ -367,7 +365,7 @@ My workflow spans the entire asset-development pipeline: from concepting in Blen
                     <div class="w-20 h-2 bg-neo-green border-2 border-black mb-6"></div>
                     <p id="modal-desc" class="text-lg mb-8 leading-relaxed">Descriere proiect...</p>
                     
-                    <!-- Extra modal details (static for now, can be dynamic) -->
+                 
                     <div class="bg-neo-bg p-4 border-2 border-black mb-6">
                         <h4 class="font-bold mb-2 flex items-center gap-2"><i data-lucide="info" class="w-4 h-4"></i> TECHNICAL 'DEETS'</h4>
                         <ul class="list-disc list-inside text-sm space-y-1" id="modal-tech-list">
@@ -388,7 +386,7 @@ My workflow spans the entire asset-development pipeline: from concepting in Blen
                         </div>
                         <div class="flex gap-4">
                             <a id="modal-link" href="#" target="_blank" class="bg-neo-black text-white border-2 border-black px-6 py-3 font-bold hover:bg-neo-blue hover:text-black transition-colors shadow-neo">
-                                VEZI LIVE / CODE
+                                  CODE
                             </a>
                         </div>
                     </div>

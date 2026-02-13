@@ -68,20 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- SPLINE LOADING HANDLER ---
-    const splineViewer = document.getElementById('main-spline-viewer');
+    // --- SPLINE IFRAME LOADING HANDLER ---
+    const splineIframe = document.getElementById('main-spline-iframe');
     const loadingOverlay = document.getElementById('spline-loading-overlay');
 
-    if (splineViewer && loadingOverlay) {
-        // Listen for the spline:load event
-        splineViewer.addEventListener('spline:load', () => {
-            // Start fade out animation
+    if (splineIframe && loadingOverlay) {
+        splineIframe.addEventListener('load', () => {
             loadingOverlay.classList.add('hidden-fade');
-
-            // Hide completely after transition
             setTimeout(() => {
                 loadingOverlay.style.display = 'none';
-            }, 500); // Must match transition duration in CSS
+            }, 500);
         });
     }
 
